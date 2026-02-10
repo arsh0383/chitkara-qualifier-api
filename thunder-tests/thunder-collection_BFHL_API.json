@@ -1,0 +1,128 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "BFHL API Tests",
+    "dateExported": "2026-02-10T06:47:26.000Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "name": "Health Check",
+            "method": "GET",
+            "url": "http://localhost:3000/health",
+            "headers": [],
+            "tests": []
+        },
+        {
+            "name": "Fibonacci - 7 terms",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fibonacci\": 7\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "Prime Numbers",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"prime\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "LCM Calculation",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"lcm\": [4, 6, 8]\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "HCF Calculation",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"hcf\": [12, 18, 24]\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "Error - Multiple Keys",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fibonacci\": 7,\n  \"prime\": [1, 2, 3]\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "Error - Empty Array",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"prime\": []\n}"
+            },
+            "tests": []
+        },
+        {
+            "name": "Error - Negative Fibonacci",
+            "method": "POST",
+            "url": "http://localhost:3000/bfhl",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fibonacci\": -5\n}"
+            },
+            "tests": []
+        }
+    ]
+}
